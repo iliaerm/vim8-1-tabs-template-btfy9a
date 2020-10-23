@@ -2,23 +2,12 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { TabTitleComponent } from './tab/tab-title/tab-title.component';
-import { TabComponent } from './tab/tab.component';
 import { TabsComponent } from './tabs.component';
-import { TabContentComponent } from './tab/tab-content/tab-content.component';
+import { TabDirective } from './tab/tab.directive';
 
 @NgModule({
-    imports: [ BrowserModule ],
-    declarations: [
-        TabsComponent,
-        TabComponent,
-        TabTitleComponent,
-        TabContentComponent
-    ],
-    exports: [
-        TabsComponent,
-        TabComponent,
-        TabTitleComponent,
-        TabContentComponent
-    ]
+  imports: [BrowserModule],
+  declarations: [TabsComponent, TabDirective, TabTitleComponent],
+  exports: [TabsComponent, TabDirective, TabTitleComponent]
 })
 export class TabsModule { }
