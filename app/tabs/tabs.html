@@ -1,0 +1,13 @@
+<div class="tabs__titles">
+	<div *ngFor="let tab of tabs"
+    class="tabs__title"
+    [class.tabs__title--active]="tab.isActive"
+		(click)="selectTab(tab)">
+		<ng-container *ngTemplateOutlet="tab.title?.templateRef">
+		</ng-container>
+	</div>
+</div>
+<div>
+	<ng-container *ngTemplateOutlet="activeTab?.content?.templateRef">
+	</ng-container>
+</div>
